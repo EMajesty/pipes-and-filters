@@ -1,8 +1,8 @@
-In this assignment we will use pipes and filters architecture to solve a problem with
+In this assignment we will use pipes and filters architecture to solve a problem with  
 complicated requirements, namely permutation and future modifications. 
 
 Probably the easiest programming language to use is c, but c++ or Java will also do. 
-NoteA! There is noneed to open a file in this case. If you find an fopen,   
+NoteA! There is no need to open a file in this case. If you find an fopen,   
 
 stream-open etc. function calls in your source code, then you should rethink, redesign and  
 refactor (will not be passed).  
@@ -10,4 +10,4 @@ refactor (will not be passed).
 NoteB! Whitespace in the text below means space or tab chars.   
 Note C! In the beginning of each source code file include the comment that describes the   
 
-operation of the filter shortly.111a
+operation of the filter shortly.111a  

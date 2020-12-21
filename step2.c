@@ -8,7 +8,7 @@ int removeLine()
 {
     int c;
     int lastchar;
-    int empty = 0;
+    
     while ((c = getchar()) != EOF)
     {
         if (c == 0x0A && lastchar == 0x0A)

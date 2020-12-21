@@ -1,42 +1,38 @@
 /*
- * A program which removes trailing whitespace. 
+ * A program which removes trailing whitespace
  */
 
 #include <stdio.h>
+#include <string.h>
 
 #define MAX_STR 1000
 
 int main()
 {
-    int c, i = 0;
-
     char str[MAX_STR]; // The array to hold a line of input
+    int i;
 
-    while ((c = getchar()) != EOF) // Until the file ends
+    while (gets(str) != NULL) // Deprecated, try to replace with fgets()
     {
-        str[i] = c;
-        if (c == 0x0A)
+        int i = strlen(str) - 1; // Start index from the end of the string
+
+        while (i >- 1)
         {
-            int j = 0;
-            printf("newline\n");
-            while (str[j] != 0x0A)
+            if (str[i] == 0x09 || str[i] == 0x20) // If tab or space is encountered
             {
-                printf("not newline\n");
-
-                int index = 0;
-
-                if (str[j] != 0x09 && str[j] != 0x20)
-                {
-                    index = j;
-                    printf("%d", index);
-                }
-                
-                j++;
+                i--;
+            }
+            else
+            {
+                break;
             }
         }
         
-        i++;
+        str[i+1] = 0x0A; // Insert newline at the end of the string
+        str[i+2] = 0x00; // Null after
+
+        printf("%s", str);
     }
-    printf("%s\n", str);
+
     return 0;
 }
